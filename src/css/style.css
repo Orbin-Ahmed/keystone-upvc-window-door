@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply bg-background-primary;
+  font-family: "Inter", sans-serif;
+}
+
+.caveat-font {
+  font-family: "Caveat", cursive;
+}
+
+.text-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 4s steps(44) 1s 1 normal both;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

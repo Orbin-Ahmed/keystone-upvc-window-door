@@ -19,8 +19,8 @@ const Header = ({}: headerProps) => {
 
   return (
     <>
-      <div className="sticky inset-x-0 top-0 z-10 bg-opacity-60 backdrop-blur-lg">
-        <div className="flex items-center justify-between py-8 gap-4">
+      <div className="sticky inset-x-0 top-0 z-10 bg-opacity-60 px-8 backdrop-blur-lg 2xs:px-12 md:px-16">
+        <div className="flex items-center justify-between gap-4 py-2">
           <Image
             src="/logo.svg"
             alt="logo"
@@ -36,24 +36,24 @@ const Header = ({}: headerProps) => {
           <div
             className={`${
               isMenuOpen ? "flex" : "hidden"
-            } xl:flex flex-col xl:flex-row xl:gap-6 xl:items-center justify-center xl:static fixed top-24 right-0 xl:w-auto p-4 xl:p-0 z-50 xl:z-auto`}
+            } fixed right-0 top-24 z-50 flex-col justify-center rounded-md bg-white p-4 xl:static xl:z-auto xl:flex xl:w-auto xl:flex-row xl:items-center xl:gap-6 xl:bg-transparent xl:p-0`}
           >
-            <a className="xl:mb-0 mb-4">
-              <button className="text-xl text-black font-semibold relative group hover:text-primary-color">
+            <a className="mb-4 xl:mb-0">
+              <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
                 Our Product{" "}
                 <span>
                   <KeyboardArrowDownIcon />
                 </span>
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary-color transition-all duration-500 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary-color transition-all duration-500 group-hover:w-full"></span>
               </button>
             </a>
-            <a className="xl:mb-0 mb-4">
-              <button className="text-xl text-black font-semibold relative group hover:text-primary-color">
+            <a className="mb-4 xl:mb-0">
+              <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
                 Gallery
-                <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-primary-color transition-all duration-500 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary-color transition-all duration-500 group-hover:w-full"></span>
               </button>
             </a>
-            <a className="xl:mb-0 mb-4">
+            <a className="mb-4 xl:mb-0">
               <CustomButton>
                 <span className="mr-2">Free Estimate</span> <ArrowOutwardIcon />
               </CustomButton>

@@ -1,15 +1,24 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
-export default function LanguageSwitch() {
-  const [isChecked, setIsChecked] = useState(false);
+type LanguageToggleProps = {
+  currentLanguage: string;
+  onLanguageChange: (newLang: string) => void;
+};
+
+export default function LanguageToggle({
+  currentLanguage,
+  onLanguageChange,
+}: LanguageToggleProps) {
+  const isChecked = currentLanguage === "ar";
 
   const handleToggle = () => {
-    setIsChecked(!isChecked);
+    const newLang = isChecked ? "en" : "ar";
+    onLanguageChange(newLang);
   };
 
   return (
-    <div className="hidden xl:flex justify-center ml-8">
+    <div className="ml-8 hidden justify-center xl:flex">
       <div className="relative inline-block">
         <input
           id="language-toggle"
@@ -20,25 +29,25 @@ export default function LanguageSwitch() {
         />
         <label
           htmlFor="language-toggle"
-          className="block w-24 h-9 bg-primary-color rounded-full relative cursor-pointer"
+          className="relative block h-9 w-24 cursor-pointer rounded-full bg-primary-color"
         >
           <span
-            className={`absolute top-[5px] left-1.5 pl-2 font-semibold uppercase  ${
-              isChecked ? "text-white" : "text-primary-color z-10"
+            className={`absolute left-1.5 top-[5px] pl-2 font-semibold uppercase ${
+              isChecked ? "text-white" : "z-10 text-primary-color"
             }`}
           >
             EN
           </span>
           <span
-            className={`absolute top-[5px] right-1.5 pr-2 font-semibold uppercase  ${
-              isChecked ? "text-primary-color z-10" : "text-white"
+            className={`absolute right-1.5 top-[5px] pr-2 font-semibold uppercase ${
+              isChecked ? "z-10 text-primary-color" : "text-white"
             }`}
           >
             AR
           </span>
           <span
-            className={`absolute top-1 left-1 w-[45px] h-7 bg-white rounded-full transition-transform duration-200 ${
-              isChecked ? "transform translate-x-[44px]" : ""
+            className={`absolute left-1 top-1 h-7 w-[45px] rounded-full bg-white transition-transform duration-200 ${
+              isChecked ? "translate-x-[44px] transform" : ""
             }`}
           ></span>
         </label>

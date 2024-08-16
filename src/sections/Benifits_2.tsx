@@ -1,3 +1,4 @@
+import GridCard from "@/components/Cards/GridCard";
 import Image from "next/image";
 import React from "react";
 
@@ -5,7 +6,7 @@ type Props = {};
 
 const Benifits_2 = (props: Props) => {
   return (
-    <div className="w-full bg-gradient-to-bl from-[#E2EDFb] to-transparent py-8">
+    <div className="from-background-gradient-color-1 bg-gradient-to-bl from-[7.51%] to-background-primary to-[64.29%] py-16">
       <div className="mx-auto max-w-screen-xl">
         <p className="mb-4 text-center text-sm font-medium md:text-base">
           Selecting the Ideal Window Solution for Your Home
@@ -26,86 +27,36 @@ const Benifits_2 = (props: Props) => {
 
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Profile Section */}
-          <div className="relative rounded-3xl bg-white p-8 shadow-lg">
-            <Image
-              src="/images/CT70 1.png"
-              alt="CT Profile"
-              width={466}
-              height={327}
-              className="object-contain"
-            />
-            <h2 className="mt-8 text-2xl font-extrabold text-gray-800">
-              PROFILE
-            </h2>
-            <p className="mt-4 text-lg text-gray-700">
-              Make sure to select windows with profiles extruded in Germany from
-              a special hot country compound and designed with 5 chambers to
-              withstand the extreme weather conditions of the Gulf countries
-              while maintaining its aesthetic nature.
-              <br />
-              <strong>
-                Only the profiles made in Germany have these characteristics.
-              </strong>
-            </p>
-          </div>
+          <GridCard
+            title="PROFILE"
+            subTitle="Make sure to select windows with profiles extruded in Germany from a
+        special hot country compound and designed with 5 chambers to withstand
+        the extreme weather conditions of the Gulf countries while maintaining
+        its aesthetic nature."
+            boldText="Only the profiles made in Germany have these characteristics."
+            image="/images/CT70 1.png"
+          />
 
           {/* Hardware Section */}
-          <div className="relative rounded-3xl bg-white p-8 shadow-lg">
-            <Image
-              src="/img/ct70-3.png"
-              alt="CT Hardware"
-              width={466}
-              height={327}
-              className="mx-auto"
-            />
-            <h2 className="mt-8 text-2xl font-extrabold text-gray-800">
-              HARDWARE
-            </h2>
-            <p className="mt-4 text-lg text-gray-700">
-              The hardware system must provide the best-in-class security and
-              insulation for the windows. It should offer a wide variety of
-              customization options while keeping the windows looking sleek and
-              modern.
-            </p>
-          </div>
+          <GridCard
+            image="/images/CT70 2.png"
+            title="STEEL"
+            subTitle="The strong, corrosion-protected steel profiles in the window frame and vents ensure stability, reliability, and longevity. Also, all the fittings are anchored securely and permanently in the steel reinforcement on all sides."
+          />
 
           {/* Steel Section */}
-          <div className="relative rounded-3xl bg-white p-8 shadow-lg">
-            <Image
-              src="/img/ct70-2.png"
-              alt="CT Steel"
-              width={466}
-              height={327}
-              className="mx-auto"
-            />
-            <h2 className="mt-8 text-2xl font-extrabold text-gray-800">
-              STEEL
-            </h2>
-            <p className="mt-4 text-lg text-gray-700">
-              The strong, corrosion-protected steel profiles in the window frame
-              ensure stability, reliability, and longevity. All fittings are
-              anchored securely in the steel reinforcement on all sides.
-            </p>
-          </div>
+          <GridCard
+            image="/images/CT70 3.png"
+            title="HARDWARE"
+            subTitle="The hardware system must provide the best-in-class security and insulation for the windows. The hardware should give a wide variety of customization options for you, while keeping the windows looking sleek and modern."
+          />
 
           {/* Accessories Section */}
-          <div className="relative rounded-3xl bg-white p-8 shadow-lg">
-            <Image
-              src="/img/ct70-4.png"
-              alt="CT Accessories"
-              width={466}
-              height={327}
-              className="mx-auto"
-            />
-            <h2 className="mt-8 text-2xl font-extrabold text-gray-800">
-              ACCESSORIES
-            </h2>
-            <p className="mt-4 text-lg text-gray-700">
-              Window accessories should allow you to create individual design
-              accents. Choose from a wide variety of options to match your
-              vision, whether it's clean, linear designs or colorful accents.
-            </p>
-          </div>
+          <GridCard
+            image="/images/CT70 4.png"
+            title="ACCESSORIES"
+            subTitle="Window accessories should allow you to create individual design accents. You should be able to choose from a wide variety of accessory options to suit your vision, be it clean, linear design, or colorful accents."
+          />
         </div>
       </div>
     </div>

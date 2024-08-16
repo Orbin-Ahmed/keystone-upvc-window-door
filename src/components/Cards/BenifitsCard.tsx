@@ -20,7 +20,7 @@ const BenifitsCard = ({
   flipFlag,
 }: BenifitsCardProps) => {
   return (
-    <div className="mx-8 mt-16 flex flex-col items-center justify-center gap-4 rounded-2xl bg-white px-12 py-6 md:flex-row xl:mx-24">
+    <div className="mx-8 mt-16 flex flex-col items-center justify-center gap-4 rounded-2xl bg-white px-12 py-6 shadow-lg shadow-gray-500/40 md:flex-row xl:mx-24">
       {!flipFlag ? (
         <>
           <div className="flex basis-1/2 flex-col items-start justify-center">

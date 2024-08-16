@@ -6,7 +6,7 @@ type Props = {};
 
 const Benifits_1 = (props: Props) => {
   return (
-    <div className="from-background-gradient-color-1 bg-gradient-to-bl from-[7.51%] to-background-primary to-[64.29%] pt-16">
+    <div className="from-background-gradient-color-1 bg-gradient-to-bl from-[7.51%] to-background-primary to-[64.29%] py-16">
       <p className="mb-4 text-center text-sm font-medium md:text-base">
         Selecting the Ideal Window Solution for Your Home
       </p>

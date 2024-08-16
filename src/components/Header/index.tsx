@@ -1,17 +1,31 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import CustomButton from "../CustomButton";
 import LangToggle from "../Switch/LangToggle";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useTranslation } from "@/app/i18n";
 
-type headerProps = {};
+type HeaderProps = {
+  lng: string;
+  handleLanguageChange: (newLang: string) => void;
+};
 
-const Header = ({}: headerProps) => {
+const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [t, setT] = useState(() => (key: string) => key);
+
+  useEffect(() => {
+    const fetchTranslations = async () => {
+      const { t: translation } = await useTranslation(lng);
+      setT(() => translation);
+    };
+
+    fetchTranslations();
+  }, [lng]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -40,7 +54,7 @@ const Header = ({}: headerProps) => {
           >
             <a className="mb-4 xl:mb-0">
               <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
-                Our Product{" "}
+                {t("Our Product")}
                 <span>
                   <KeyboardArrowDownIcon />
                 </span>
@@ -49,16 +63,20 @@ const Header = ({}: headerProps) => {
             </a>
             <a className="mb-4 xl:mb-0">
               <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
-                Gallery
+                {t("Gallery")}
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary-color transition-all duration-500 group-hover:w-full"></span>
               </button>
             </a>
             <a className="mb-4 xl:mb-0">
               <CustomButton>
-                <span className="mr-2">Free Estimate</span> <ArrowOutwardIcon />
+                <span className="mr-2">{t("Free Estimate")}</span>{" "}
+                <ArrowOutwardIcon />
               </CustomButton>
             </a>
-            <LangToggle />
+            <LangToggle
+              currentLanguage={lng}
+              onLanguageChange={handleLanguageChange}
+            />
           </div>
         </div>
       </div>

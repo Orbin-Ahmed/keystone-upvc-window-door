@@ -1,5 +1,8 @@
 import Header from "@/components/Header";
+import Benifits_1 from "@/sections/Benifits_1";
+import Benifits_2 from "@/sections/Benifits_2";
 import Hero from "@/sections/Hero";
+import OurStory from "@/sections/OurStory";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,6 +15,9 @@ export default function Home() {
     <>
       <Header />
       <Hero />
+      <OurStory />
+      <Benifits_1 />
+      <Benifits_2 />
     </>
   );
 }

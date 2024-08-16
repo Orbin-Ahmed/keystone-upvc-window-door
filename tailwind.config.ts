@@ -11,10 +11,10 @@ const config: Config = {
     extend: {
       colors: {
         "background-primary": "#F2F9FF",
-        "background-secondary":
-          "linear-gradient(230.07deg, #E2EDFB 7.51%, rgba(217, 217, 217, 0) 64.29%)",
+        "background-gradient-color-1": "#E2EDFB",
         "primary-color": "#8ECB2C",
         "primray-hover": "#A7D74A",
+        "primary-text": "#1D2E3B",
         "secondary-text": "#60606B",
       },
       screens: {

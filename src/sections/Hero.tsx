@@ -1,7 +1,7 @@
 import CustomButton from "@/components/CustomButton";
+import EstimateButton from "@/components/CustomButton/EstimateButton";
 import Image from "next/image";
 import React from "react";
-import KeyboardDoubleArrowRightSharpIcon from "@mui/icons-material/KeyboardDoubleArrowRightSharp";
 
 type HeroProps = {};
 
@@ -40,13 +40,7 @@ const Hero = ({}: HeroProps) => {
           </div>
         </div>
         <div className="mt-8 flex flex-col items-center justify-center text-xs 2xs:text-sm md:mt-16 2md:text-base">
-          <CustomButton className="flex items-center justify-center py-4">
-            Request Your Free Estimate Today{" "}
-            <KeyboardDoubleArrowRightSharpIcon />
-          </CustomButton>
-          <p className="mt-4 text-secondary-text">
-            No Obligations • Hassle-Free Experience
-          </p>
+          <EstimateButton />
         </div>
         {/* Green Tick Text Area Start */}
         <div className="mt-6 flex flex-col items-center justify-center gap-4 md:mt-12 md:flex-row">
@@ -114,69 +108,6 @@ const Hero = ({}: HeroProps) => {
           </div>
         </div>
         {/* Green Tick Text Area End */}
-        {/* Service guaranty area  */}
-        <div className="mt-8 flex items-center justify-center gap-2 rounded-md bg-white p-8 text-center">
-          <div className="justify-centerbasis-1/6 flex flex-col items-center">
-            <Image
-              src="/icons/Guarantee.svg"
-              alt="tick"
-              width={96}
-              height={96}
-              className="object-contain"
-            />
-            <p className="text-sm lg:text-lg">Premium Schuco Profiles</p>
-          </div>
-          <div className="justify-centerbasis-1/6 flex flex-col items-center">
-            <Image
-              src="/icons/Design services.svg"
-              alt="tick"
-              width={96}
-              height={96}
-              className="object-contain"
-            />
-            <p className="text-sm lg:text-lg">Premium Schuco Profiles</p>
-          </div>
-          <div className="justify-centerbasis-1/6 flex flex-col items-center">
-            <Image
-              src="/icons/Shield.svg"
-              alt="tick"
-              width={96}
-              height={96}
-              className="object-contain"
-            />
-            <p className="text-sm lg:text-lg">Premium Schuco Profiles</p>
-          </div>
-          <div className="justify-centerbasis-1/6 flex flex-col items-center">
-            <Image
-              src="/icons/lock.svg"
-              alt="tick"
-              width={96}
-              height={96}
-              className="object-contain"
-            />
-            <p className="text-sm lg:text-lg">Premium Schuco Profiles</p>
-          </div>
-          <div className="justify-centerbasis-1/6 flex flex-col items-center">
-            <Image
-              src="/icons/light.svg"
-              alt="tick"
-              width={96}
-              height={96}
-              className="object-contain"
-            />
-            <p className="text-sm lg:text-lg">Premium Schuco Profiles</p>
-          </div>
-          <div className="justify-centerbasis-1/6 flex flex-col items-center">
-            <Image
-              src="/icons/lock_time.svg"
-              alt="tick"
-              width={96}
-              height={96}
-              className="object-contain"
-            />
-            <p className="text-sm lg:text-lg">Premium Schuco Profiles</p>
-          </div>
-        </div>
       </div>
     </div>
   );

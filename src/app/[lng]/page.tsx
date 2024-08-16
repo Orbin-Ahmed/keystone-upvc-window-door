@@ -22,7 +22,7 @@ export default function Home({ params }: { params: { lng: string } }) {
         lng={currentLanguage}
         handleLanguageChange={handleLanguageChange}
       />
-      <Hero />
+      <Hero lng={currentLanguage} />
       <OurStory />
       <Benifits_1 />
       <Benifits_2 />

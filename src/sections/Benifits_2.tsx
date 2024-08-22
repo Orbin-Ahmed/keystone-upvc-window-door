@@ -1,12 +1,18 @@
+"use client";
 import GridCard from "@/components/Cards/GridCard";
+import EstimateButton from "@/components/CustomButton/EstimateButton";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
-type Props = {};
+type Benefits2Props = {
+  lng: string;
+};
 
-const Benifits_2 = (props: Props) => {
+const Benifits_2 = ({ lng }: Benefits2Props) => {
+  const [t, setT] = useState(() => (key: string) => key);
+
   return (
-    <div className="from-background-gradient-color-1 bg-gradient-to-bl from-[7.51%] to-background-primary to-[64.29%] py-16">
+    <div className="bg-gradient-to-bl from-background-gradient-color-1 from-[7.51%] to-background-primary to-[64.29%] py-16">
       <div className="mx-auto max-w-screen-xl">
         <p className="mb-4 text-center text-sm font-medium md:text-base">
           Selecting the Ideal Window Solution for Your Home
@@ -25,7 +31,7 @@ const Benifits_2 = (props: Props) => {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 gap-12 px-12 lg:grid-cols-2 xl:px-2">
           {/* Profile Section */}
           <GridCard
             title="PROFILE"
@@ -58,6 +64,9 @@ const Benifits_2 = (props: Props) => {
             subTitle="Window accessories should allow you to create individual design accents. You should be able to choose from a wide variety of accessory options to suit your vision, be it clean, linear design, or colorful accents."
           />
         </div>
+      </div>
+      <div className="mt-8 flex flex-col items-center justify-center text-xs 2xs:text-sm md:mt-16 2md:text-base">
+        <EstimateButton />
       </div>
     </div>
   );

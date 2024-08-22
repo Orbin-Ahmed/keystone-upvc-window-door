@@ -1,12 +1,16 @@
+"use client";
 import EstimateButton from "@/components/CustomButton/EstimateButton";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
-type OurStoryProps = {};
+type OurStoryProps = {
+  lng: string;
+};
 
-const OurStory = ({}: OurStoryProps) => {
+const OurStory = ({ lng }: OurStoryProps) => {
+  const [t, setT] = useState(() => (key: string) => key);
   return (
-    <div className="from-background-gradient-color-1 bg-gradient-to-bl from-[7.51%] to-background-primary to-[64.29%] px-8 pb-16 pt-8 lg:px-4 lg:pt-4">
+    <div className="bg-gradient-to-bl from-background-gradient-color-1 from-[7.51%] to-background-primary to-[64.29%] px-8 pb-16 pt-8 lg:px-4 lg:pt-4">
       <div className="mx-auto w-full lg:w-4/5">
         {/* Service guaranty area Start */}
         <div className="mt-8 grid grid-cols-1 gap-8 rounded-md bg-white p-8 text-center 2xs:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">

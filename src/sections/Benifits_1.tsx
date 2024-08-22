@@ -1,12 +1,17 @@
+"use client";
 import BenifitsCard from "@/components/Cards/BenifitsCard";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
-type Props = {};
+type BenefitsProps = {
+  lng: string;
+};
 
-const Benifits_1 = (props: Props) => {
+const Benifits_1 = ({ lng }: BenefitsProps) => {
+  const [t, setT] = useState(() => (key: string) => key);
+
   return (
-    <div className="from-background-gradient-color-1 bg-gradient-to-bl from-[7.51%] to-background-primary to-[64.29%] py-16">
+    <div className="bg-gradient-to-bl from-background-gradient-color-1 from-[7.51%] to-background-primary to-[64.29%] py-16">
       <p className="mb-4 text-center text-sm font-medium md:text-base">
         Selecting the Ideal Window Solution for Your Home
       </p>

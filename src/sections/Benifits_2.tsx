@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 import GridCard from "@/components/Cards/GridCard";
 import EstimateButton from "@/components/CustomButton/EstimateButton";
 import Image from "next/image";
@@ -14,7 +14,7 @@ const Benifits_2 = ({ lng }: Benefits2Props) => {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 

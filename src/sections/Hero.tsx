@@ -2,7 +2,7 @@ import CustomButton from "@/components/CustomButton";
 import EstimateButton from "@/components/CustomButton/EstimateButton";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 
 type HeroProps = {
   lng: string;
@@ -13,7 +13,7 @@ const Hero = ({ lng }: HeroProps) => {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 

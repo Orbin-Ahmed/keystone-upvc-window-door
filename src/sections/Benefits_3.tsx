@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 import AccordianCard from "@/components/Cards/AccordianCard";
 import EstimateButton from "@/components/CustomButton/EstimateButton";
 import React, { useEffect, useState } from "react";
@@ -13,7 +13,7 @@ const Benefits_3 = ({ lng }: Benifits3Props) => {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 

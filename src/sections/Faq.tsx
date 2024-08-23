@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 import AccordionItem from "@/components/Cards/Accordion";
 import React, { useEffect, useState } from "react";
 
@@ -14,7 +14,7 @@ const Faq = ({ lng }: FaqProps) => {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 

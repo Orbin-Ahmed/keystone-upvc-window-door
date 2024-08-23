@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 import EstimateButton from "@/components/CustomButton/EstimateButton";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -13,7 +13,7 @@ const OurStory = ({ lng }: OurStoryProps) => {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 

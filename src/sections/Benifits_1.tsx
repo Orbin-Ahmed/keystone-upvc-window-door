@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 import BenifitsCard from "@/components/Cards/BenifitsCard";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
@@ -13,7 +13,7 @@ const Benifits_1 = ({ lng }: BenefitsProps) => {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 

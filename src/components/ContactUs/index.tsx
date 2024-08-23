@@ -1,5 +1,5 @@
 "use client";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 import React, { useEffect, useState } from "react";
 
 type ContactUSProps = {
@@ -11,7 +11,7 @@ const ContactUS = ({ lng }: ContactUSProps) => {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 

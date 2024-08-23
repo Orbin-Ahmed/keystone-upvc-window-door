@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CustomButton from ".";
 import KeyboardDoubleArrowRightSharpIcon from "@mui/icons-material/KeyboardDoubleArrowRightSharp";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 import Link from "next/link";
 
 type EstimateButtonProps = {
@@ -16,7 +16,7 @@ function EstimateButton({ lng }: EstimateButtonProps) {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 

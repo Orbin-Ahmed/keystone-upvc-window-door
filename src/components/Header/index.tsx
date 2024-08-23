@@ -7,7 +7,7 @@ import CustomButton from "../CustomButton";
 import LangToggle from "../Switch/LangToggle";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import { useTranslation } from "@/app/i18n";
+import { UseTranslation } from "@/app/i18n";
 import Link from "next/link";
 
 type HeaderProps = {
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
 
   useEffect(() => {
     const fetchTranslations = async () => {
-      const { t: translation } = await useTranslation(lng);
+      const { t: translation } = await UseTranslation(lng);
       setT(() => translation);
     };
 
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
               isMenuOpen ? "flex" : "hidden"
             } fixed right-0 top-24 z-50 flex-col justify-center rounded-md bg-white p-4 xl:static xl:z-auto xl:flex xl:w-auto xl:flex-row xl:items-center xl:gap-6 xl:bg-transparent xl:p-0`}
           >
-            <a className="mb-4 xl:mb-0">
+            <Link href="/gallery" className="mb-4 xl:mb-0">
               <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
                 {t("Our Product")}
                 <span>
@@ -63,13 +63,13 @@ const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
                 </span>
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary-color transition-all duration-500 group-hover:w-full"></span>
               </button>
-            </a>
-            <a className="mb-4 xl:mb-0">
+            </Link>
+            <Link href="/gallery" className="mb-4 xl:mb-0">
               <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
                 {t("Gallery")}
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary-color transition-all duration-500 group-hover:w-full"></span>
               </button>
-            </a>
+            </Link>
             <Link href="/contact-us" className="mb-4 xl:mb-0">
               <CustomButton>
                 <span className="mr-2">{t("Free Estimate")}</span>{" "}

@@ -8,6 +8,7 @@ import Hero from "@/sections/Hero";
 import OurStory from "@/sections/OurStory";
 import Benefits_3 from "@/sections/Benefits_3";
 import FourReasons from "@/sections/FourReasons";
+import BonusSection from "@/sections/BonusSection";
 
 export default function Home({ params }: { params: { lng: string } }) {
   const [currentLanguage, setCurrentLanguage] = useState(params.lng);
@@ -30,6 +31,7 @@ export default function Home({ params }: { params: { lng: string } }) {
       <Benifits_2 lng={currentLanguage} />
       <Benefits_3 lng={currentLanguage} />
       <FourReasons lng={currentLanguage} />
+      <BonusSection lng={currentLanguage} />
     </>
   );
 }

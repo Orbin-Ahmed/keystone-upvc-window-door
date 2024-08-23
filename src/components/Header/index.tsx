@@ -8,6 +8,7 @@ import LangToggle from "../Switch/LangToggle";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useTranslation } from "@/app/i18n";
+import Link from "next/link";
 
 type HeaderProps = {
   lng: string;
@@ -35,13 +36,15 @@ const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
     <>
       <div className="sticky inset-x-0 top-0 z-10 bg-opacity-60 px-8 backdrop-blur-lg 2xs:px-12 md:px-16">
         <div className="flex items-center justify-between gap-4 py-2">
-          <Image
-            src="/logo.svg"
-            alt="logo"
-            width={284}
-            height={80}
-            className="object-contain"
-          />
+          <Link href="/">
+            <Image
+              src="/logo.svg"
+              alt="logo"
+              width={284}
+              height={80}
+              className="object-contain"
+            />
+          </Link>
           <div className="flex items-center xl:hidden">
             <button onClick={toggleMenu}>
               {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
@@ -67,12 +70,12 @@ const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary-color transition-all duration-500 group-hover:w-full"></span>
               </button>
             </a>
-            <a className="mb-4 xl:mb-0">
+            <Link href="/contact-us" className="mb-4 xl:mb-0">
               <CustomButton>
                 <span className="mr-2">{t("Free Estimate")}</span>{" "}
                 <ArrowOutwardIcon />
               </CustomButton>
-            </a>
+            </Link>
             <LangToggle
               currentLanguage={lng}
               onLanguageChange={handleLanguageChange}

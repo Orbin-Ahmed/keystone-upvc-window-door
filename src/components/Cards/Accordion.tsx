@@ -7,8 +7,9 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 type AccordionItemProps = {
   title: string;
-  subtitle?: string;
-  content: string;
+  content?: string;
+  bulletList?: string[];
+  endContent?: string;
   panel: string;
   expanded: string | false;
   handleChange: (
@@ -18,8 +19,8 @@ type AccordionItemProps = {
 
 const AccordionItem = ({
   title,
-  subtitle,
   content,
+  bulletList,
   panel,
   expanded,
   handleChange,
@@ -30,13 +31,17 @@ const AccordionItem = ({
       aria-controls={`${panel}-content`}
       id={`${panel}-header`}
     >
-      <Typography sx={{ width: "33%", flexShrink: 0 }}>{title}</Typography>
-      {subtitle && (
-        <Typography sx={{ color: "text.secondary" }}>{subtitle}</Typography>
-      )}
+      <Typography className="font-bold">{title}</Typography>
     </AccordionSummary>
     <AccordionDetails>
       <Typography>{content}</Typography>
+      {bulletList && (
+        <ul className="list-decimal p-8 text-justify">
+          {bulletList.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      )}
     </AccordionDetails>
   </Accordion>
 );

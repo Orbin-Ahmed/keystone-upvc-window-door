@@ -54,7 +54,7 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
           <div className="flex items-center justify-center">
             <div className="basis-1/4">
               <Image
-                src="/images/group 37.svg"
+                src="/images/group_37.svg"
                 alt="window"
                 width={250}
                 height={200}
@@ -63,7 +63,7 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
             </div>
             <div className="basis-1/4">
               <Image
-                src="/images/group 40.svg"
+                src="/images/group_40.svg"
                 alt="window"
                 width={250}
                 height={200}
@@ -72,7 +72,7 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
             </div>
             <div className="basis-1/4">
               <Image
-                src="/images/group 38.svg"
+                src="/images/group_38.svg"
                 alt="window"
                 width={250}
                 height={200}
@@ -81,7 +81,7 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
             </div>
             <div className="basis-1/4">
               <Image
-                src="/images/group 39.svg"
+                src="/images/group_39.svg"
                 alt="window"
                 width={250}
                 height={200}
@@ -98,7 +98,7 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
           <div className="mt-8 flex flex-col items-center justify-between sm:flex-row">
             <div className="basis-1/4">
               <Image
-                src="/images/group 43.svg"
+                src="/images/group_43.svg"
                 alt="window"
                 width={280}
                 height={340}
@@ -107,7 +107,7 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
             </div>
             <div className="basis-1/4">
               <Image
-                src="/images/group 44.svg"
+                src="/images/group_44.svg"
                 alt="window"
                 width={280}
                 height={340}
@@ -116,7 +116,7 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
             </div>
             <div className="basis-1/4">
               <Image
-                src="/images/group 45.svg"
+                src="/images/group_45.svg"
                 alt="window"
                 width={280}
                 height={340}

@@ -93,5 +93,4 @@ const Benifits_1 = ({ lng }: BenefitsProps) => {
     </div>
   );
 };
-
 export default Benifits_1;

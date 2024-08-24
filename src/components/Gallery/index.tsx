@@ -23,12 +23,11 @@ const Gallery = ({ lng }: GalleryProps) => {
     <>
       <div className="w-full">
         <Image
-          src="/images/Component 1.svg"
+          src="/images/Component_1.svg"
           alt="Top-image"
           width={1920}
           height={1080}
           layout="responsive"
-          objectFit="cover"
         />
         <p className="mt-16 text-center text-3xl font-bold">
           {t("Product Specifications")}

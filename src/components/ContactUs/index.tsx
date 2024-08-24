@@ -31,7 +31,7 @@ const ContactUS = ({ lng }: ContactUSProps) => {
     setMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

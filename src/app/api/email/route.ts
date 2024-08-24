@@ -1,8 +1,10 @@
 import nodemailer from "nodemailer";
+import { NextResponse } from "next/server";
 
-export default async function handler(req: any, res: any) {
-  if (req.method === "POST") {
-    const { name, email, phone } = req.body;
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    const { name, email, phone } = body;
 
     let transporter = nodemailer.createTransport({
       service: "gmail",
@@ -14,7 +16,7 @@ export default async function handler(req: any, res: any) {
 
     const mailOptions = {
       from: process.env.GMAIL_USER,
-      to: "orbin.ahmed@idealhomeuae.com",
+      to: "sales@keystoneuae.com",
       subject: "New Customer Request from Website",
       text: `You have received a new contact request.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}`,
       html: `
@@ -25,14 +27,17 @@ export default async function handler(req: any, res: any) {
       `,
     };
 
-    try {
-      await transporter.sendMail(mailOptions);
-      res.status(200).json({ message: "Email sent successfully!" });
-    } catch (error) {
-      console.error("Error sending email:", error);
-      res.status(500).json({ message: "Internal Server Error" });
-    }
-  } else {
-    res.status(405).json({ message: "Method Not Allowed" });
+    await transporter.sendMail(mailOptions);
+
+    return NextResponse.json(
+      { message: "Email sent successfully!" },
+      { status: 200 },
+    );
+  } catch (error) {
+    console.error("Error sending email:", error);
+    return NextResponse.json(
+      { message: "Internal Server Error" },
+      { status: 500 },
+    );
   }
 }

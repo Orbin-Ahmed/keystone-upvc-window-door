@@ -25,7 +25,11 @@ const AccordionItem = ({
   expanded,
   handleChange,
 }: AccordionItemProps) => (
-  <Accordion expanded={expanded === panel} onChange={handleChange(panel)}>
+  <Accordion
+    expanded={expanded === panel}
+    onChange={handleChange(panel)}
+    className="w-full"
+  >
     <AccordionSummary
       expandIcon={<ExpandMoreIcon />}
       aria-controls={`${panel}-content`}

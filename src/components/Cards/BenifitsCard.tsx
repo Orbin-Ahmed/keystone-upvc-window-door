@@ -9,14 +9,18 @@ type BenifitsCardProps = {
   caveatText: string;
   image: string;
   flipFlag: boolean;
+  lng: string;
+  fixedText: string;
 };
 
 const BenifitsCard = ({
   title,
+  fixedText,
   subTitle,
   caveatText,
   subTitle2,
   image,
+  lng,
   flipFlag,
 }: BenifitsCardProps) => {
   return (
@@ -24,8 +28,8 @@ const BenifitsCard = ({
       {!flipFlag ? (
         <>
           <div className="flex basis-1/2 flex-col items-start justify-center">
-            <p className="text-primary-hover text-lg font-extrabold lg:text-xl">
-              uPVC Windows Are…
+            <p className="text-lg font-extrabold text-primary-color lg:text-xl">
+              {fixedText}
             </p>
             <p className="text-2xl font-extrabold lg:text-4xl">{title}</p>
             <p className="mt-8 text-base font-medium lg:text-xl">{subTitle}</p>
@@ -47,7 +51,7 @@ const BenifitsCard = ({
               className="object-contain"
             />
             <div className="mt-4 flex flex-col items-center justify-center text-xs 2xs:text-sm md:mt-8 2md:text-base">
-              <EstimateButton />
+              <EstimateButton lng={lng} />
             </div>
           </div>
         </>
@@ -62,12 +66,12 @@ const BenifitsCard = ({
               className="object-contain"
             />
             <div className="mt-4 flex flex-col items-center justify-center text-xs 2xs:text-sm md:mt-8 2md:text-base">
-              <EstimateButton />
+              <EstimateButton lng={lng} />
             </div>
           </div>
           <div className="flex basis-1/2 flex-col items-start justify-center">
-            <p className="text-primary-hover text-lg font-extrabold lg:text-xl">
-              uPVC Windows Are…
+            <p className="text-lg font-extrabold text-primary-color lg:text-xl">
+              {fixedText}
             </p>
             <p className="text-2xl font-extrabold lg:text-4xl">{title}</p>
             <p className="mt-8 text-base font-medium lg:text-xl">{subTitle}</p>

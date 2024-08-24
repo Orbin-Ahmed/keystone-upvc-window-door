@@ -51,42 +51,46 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
           <p className="mt-4 text-lg opacity-70 md:text-2xl">
             {t("to choose Schüco windows, doors and sliding doors")}
           </p>
-          <div className="flex items-center justify-center">
-            <div className="basis-1/4">
-              <Image
-                src="/images/group_37.svg"
-                alt="window"
-                width={250}
-                height={200}
-                className="mt-12 object-contain"
-              />
-            </div>
-            <div className="basis-1/4">
+          <div className="flex items-center justify-center gap-4">
+            <div className="flex basis-1/4 flex-col items-center justify-center">
               <Image
                 src="/images/group_40.svg"
                 alt="window"
-                width={250}
-                height={200}
+                width={150}
+                height={150}
                 className="mt-12 object-contain"
               />
+              <p className="mt-2 text-xl">{t("INNOVATION")}</p>
             </div>
-            <div className="basis-1/4">
-              <Image
-                src="/images/group_38.svg"
-                alt="window"
-                width={250}
-                height={200}
-                className="mt-12 object-contain"
-              />
-            </div>
-            <div className="basis-1/4">
+            <div className="flex basis-1/4 flex-col items-center justify-center">
               <Image
                 src="/images/group_39.svg"
                 alt="window"
-                width={250}
-                height={200}
+                width={150}
+                height={150}
                 className="mt-12 object-contain"
               />
+              <p className="mt-2 text-xl">{t("CONFIDENCE")}</p>
+            </div>
+            <div className="flex basis-1/4 flex-col items-center justify-center">
+              <Image
+                src="/images/group_38.svg"
+                alt="window"
+                width={150}
+                height={150}
+                className="mt-12 object-contain"
+              />
+              <p className="mt-2 text-xl">{t("QUALITY")}</p>
+            </div>
+            <div className="flex basis-1/4 flex-col items-center justify-center">
+              <Image
+                src="/images/group_37.svg"
+                alt="window"
+                width={150}
+                height={150}
+                className="mt-12 object-contain"
+              />
+              <p className="mt-2 text-xl">{t("PASSION")}</p>
             </div>
           </div>
           <div className="mt-16 flex flex-col items-center justify-center text-xs 2xs:text-sm md:mt-32 2md:text-base">
@@ -96,32 +100,35 @@ const FourReasons = ({ lng }: FourReasonsProps) => {
             {t("Know more about the products")}
           </p>
           <div className="mt-8 flex flex-col items-center justify-between sm:flex-row">
-            <div className="basis-1/4">
+            <div className="flex basis-1/4 flex-col items-center justify-center">
               <Image
-                src="/images/group_43.svg"
+                src="/images/Rectangle 16.png"
                 alt="window"
                 width={280}
                 height={340}
                 className="mb-4 object-contain"
               />
+              <p className="mt-2 text-xl font-bold">{t("Windows")}</p>
             </div>
-            <div className="basis-1/4">
+            <div className="flex basis-1/4 flex-col items-center justify-center">
               <Image
-                src="/images/group_44.svg"
+                src="/images/Rectangle 17.png"
                 alt="window"
                 width={280}
                 height={340}
                 className="mb-4 object-contain"
               />
+              <p className="mt-2 text-xl font-bold">{t("Doors")}</p>
             </div>
-            <div className="basis-1/4">
+            <div className="flex basis-1/4 flex-col items-center justify-center">
               <Image
-                src="/images/group_45.svg"
+                src="/images/Rectangle 18.png"
                 alt="window"
                 width={280}
                 height={340}
                 className="mb-4 object-contain"
               />
+              <p className="mt-2 text-xl font-bold">{t("Sliding Doors")}</p>
             </div>
           </div>
         </div>

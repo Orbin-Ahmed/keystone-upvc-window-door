@@ -41,49 +41,49 @@ const Benefits_3 = ({ lng }: Benifits3Props) => {
             text={t(
               "Go only for trusted German brands who offer durable, energy-efficient, and stylish products.",
             )}
-            points="1"
+            points={t("1")}
           />
           <AccordianCard
             text={t(
               "Make sure that the uPVC window entire system including the profiles, steel, hardware, accessories and EPDM gaskets are designed and manufactured by the same German supplier.",
             )}
-            points="2"
+            points={t("2")}
           />
           <AccordianCard
             text={t(
               "Make sure that the steel offered for the windows enforcement have the thickness that is appropriate for the size and use of the window or door and it covers the full profile length.",
             )}
-            points="3"
+            points={t("3")}
           />
           <AccordianCard
             text={t(
               "Make sure that the glass used in the uPVC windows is high-performance, featuring a low U-value to match the thermal and insulation properties of the window system.",
             )}
-            points="4"
+            points={t("4")}
           />
           <AccordianCard
             text={t(
               "The fabricator must have the capability and flexibility to align with your external and interiors design of your dream home.",
             )}
-            points="5"
+            points={t("5")}
           />
           <AccordianCard
             text={t(
               "You should always ask for detailed design drawings to confirm that the fabricator has selected the right profile, steel thickness, hardware, and accessories for your uPVC windows and doors. And all these components are made in Germany, only then you can guarantee that you are getting the right value for your money.",
             )}
-            points="6"
+            points={t("6")}
           />
           <AccordianCard
             text={t(
               "Also make sure that the detailed design drawings include the specifications of the glass stating the U value, thickness, and origin of the glass.",
             )}
-            points="7"
+            points={t("7")}
           />
           <AccordianCard
             text={t(
               "The fabricator must offer the best workmanship quality through trained professionals using the German machinery for making the highest quality uPVC windows and doors.",
             )}
-            points="8"
+            points={t("8")}
           />
         </div>
       </div>

@@ -44,6 +44,8 @@ const Benifits_1 = ({ lng }: BenefitsProps) => {
         />
       </div>
       <BenifitsCard
+        fixedText={t("uPVC Windows Are…")}
+        lng={lng}
         flipFlag={false}
         title={t("the Best for Home Insulation")}
         subTitle={t(
@@ -55,6 +57,8 @@ const Benifits_1 = ({ lng }: BenefitsProps) => {
         image="/images/window.png"
       />
       <BenifitsCard
+        fixedText={t("uPVC Windows Are…")}
+        lng={lng}
         flipFlag={true}
         title={t("Your Noise Reduction Solution")}
         subTitle={t(
@@ -66,6 +70,8 @@ const Benifits_1 = ({ lng }: BenefitsProps) => {
         image="/images/image 2.png"
       />
       <BenifitsCard
+        fixedText={t("uPVC Windows Are…")}
+        lng={lng}
         flipFlag={false}
         title={t("Your Low Maintenance Solution")}
         subTitle={t(
@@ -77,6 +83,8 @@ const Benifits_1 = ({ lng }: BenefitsProps) => {
         image="/images/image 3.png"
       />
       <BenifitsCard
+        fixedText={t("uPVC Windows Are…")}
+        lng={lng}
         flipFlag={true}
         title={t("Your Durable Window Solution")}
         subTitle={t(

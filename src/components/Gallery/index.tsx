@@ -34,25 +34,23 @@ const Gallery = ({ lng }: GalleryProps) => {
           {t("Product Specifications")}
         </p>
         <Image
-          src="/images/Group 113.svg"
+          src="/images/Group_113.svg"
           alt="Details-image"
           width={1920}
           height={1080}
           layout="responsive"
           className="mt-8"
-          objectFit="cover"
         />
         <p className="mt-16 text-center text-3xl font-bold">
           {t("Opening Types")}
         </p>
         <Image
-          src="/images/Group 114.svg"
+          src="/images/Group_114.svg"
           alt="Details-image"
           width={1920}
           height={1080}
           layout="responsive"
           className="mt-8"
-          objectFit="cover"
         />
         <div className="mt-12 flex flex-col items-center justify-between gap-2 sm:flex-row">
           <div className="flex basis-1/3 flex-col items-center justify-center">

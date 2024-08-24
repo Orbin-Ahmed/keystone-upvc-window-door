@@ -31,7 +31,7 @@ const ContactUS = ({ lng }: ContactUSProps) => {
     setMessage("");
 
     try {
-      const response = await fetch("/api/email", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -49,6 +49,15 @@ const ContactUS = ({ lng }: ContactUSProps) => {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    const fetchTranslations = async () => {
+      const { t: translation } = await UseTranslation(lng);
+      setT(() => translation);
+    };
+
+    fetchTranslations();
+  }, [lng]);
 
   return (
     <div className="flex flex-col px-5 py-8">
@@ -125,6 +134,51 @@ const ContactUS = ({ lng }: ContactUSProps) => {
 
           {message && <p className="mt-4 text-center">{message}</p>}
         </form>
+
+        <aside className="mt-10 flex basis-1/2 flex-col lg:mt-0">
+          <h3 className="text-center text-lg font-extrabold sm:text-2xl lg:text-4xl">
+            {t("Join Our Growing Family of Satisfied Homeowners!")}
+          </h3>
+          <ul className="mt-4 flex flex-wrap justify-between gap-2 font-bold">
+            <li className="flex items-center gap-2 text-xs sm:text-base">
+              <span className="h-5 w-5 bg-[#8ecb2c]"></span>
+              {t("Sound Proof")}
+            </li>
+            <li className="flex items-center gap-2 text-xs sm:text-base">
+              <span className="h-5 w-5 bg-[#8ecb2c]"></span>
+              {t("Weather Proof")}
+            </li>
+            <li className="flex items-center gap-2 text-xs sm:text-base">
+              <span className="h-5 w-5 bg-[#8ecb2c]"></span>
+              {t("Near to Zero Maintenance")}
+            </li>
+          </ul>
+
+          <div className="mt-10 border border-black border-opacity-50 p-10">
+            <div className="flex flex-col gap-5 lg:flex-row">
+              <div className="flex-grow">
+                <h4 className="font-bold">
+                  {t("Get Your Free Estimate Today")}
+                </h4>
+                <p className="mt-2 opacity-70">
+                  {t("Receive a detailed quote after your request")}
+                </p>
+              </div>
+              <p className="mt-5 opacity-70 lg:mt-0">
+                {t("No payment required today")}
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col">
+            <h4 className="font-bold">{t("10-Year Warranty")}</h4>
+            <p className="mt-2 opacity-70">
+              {t(
+                "We stand by the quality of our profiles with a 10-year warranty.",
+              )}
+            </p>
+          </div>
+        </aside>
       </div>
     </div>
   );

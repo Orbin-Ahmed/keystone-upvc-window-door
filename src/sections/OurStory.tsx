@@ -132,7 +132,7 @@ const OurStory = ({ lng }: OurStoryProps) => {
               "If you're visiting our website, it means you share this goal. You're on the right track to achieving it. Let us guide you in choosing the best windows and doors for your home.",
             )}
             <br />
-            {t("Here&rsquo;s how:")}
+            {t("Here's how:")}
           </p>
           <ul className="mt-8 flex list-decimal flex-col items-start pl-6 text-left">
             <li className="mb-4 text-base font-semibold md:text-lg xl:text-2xl">

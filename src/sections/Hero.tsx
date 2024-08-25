@@ -34,7 +34,7 @@ const Hero = ({ lng }: HeroProps) => {
               <p className="mt-4 text-sm font-extrabold 2md:text-base xl:text-2xl">
                 {t("Discover")}{" "}
                 <span className="text-base 2md:text-2xl xl:text-4xl">
-                  {t("Keystone uPVC&rsquo;s")}
+                  {t("Keystone uPVC's")}
                 </span>{" "}
                 <br />
                 {t("Premium uPVC Windows and Doors Solutions.")}

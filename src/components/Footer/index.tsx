@@ -54,14 +54,14 @@ const Footer = ({ lng }: FooterProps) => {
               <li>
                 <Link href="/products">
                   <p className="text-gray-300 hover:text-white">
-                    {t("Our Product")}
+                    {t("Gallery")}
                   </p>
                 </Link>
               </li>
               <li>
                 <Link href="/gallery">
                   <p className="text-gray-300 hover:text-white">
-                    {t("Gallery")}
+                    {t("Our Product")}
                   </p>
                 </Link>
               </li>

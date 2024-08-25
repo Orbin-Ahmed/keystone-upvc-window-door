@@ -57,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
           >
             <Link href="/products" className="mb-4 xl:mb-0">
               <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
-                {t("Our Product")}
+                {t("Gallery")}
                 <span>
                   <KeyboardArrowDownIcon />
                 </span>
@@ -66,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
             </Link>
             <Link href="/gallery" className="mb-4 xl:mb-0">
               <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
-                {t("Gallery")}
+                {t("Our Product")}
                 <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-primary-color transition-all duration-500 group-hover:w-full"></span>
               </button>
             </Link>

@@ -52,7 +52,7 @@ const Footer = ({ lng }: FooterProps) => {
                 </Link>
               </li>
               <li>
-                <Link href="/about">
+                <Link href="/products">
                   <p className="text-gray-300 hover:text-white">
                     {t("Our Product")}
                   </p>
@@ -72,29 +72,29 @@ const Footer = ({ lng }: FooterProps) => {
           <div>
             <h3 className="mb-4 text-xl font-bold">{t("Follow Us")}</h3>
             <div className="flex space-x-4">
-              <Link
+              {/* <Link
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FacebookIcon className="h-6 w-6 text-gray-300 hover:text-white" />
-              </Link>
+              </Link> */}
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/keystone.upvc/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <InstagramIcon className="h-6 w-6 text-gray-300 hover:text-white" />
               </Link>
               <Link
-                href="https://linkedin.com"
+                href="https://ae.linkedin.com/company/keystoneupvc"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkedInIcon className="h-6 w-6 text-gray-300 hover:text-white" />
               </Link>
               <Link
-                href="https://youtube.com"
+                href="https://www.youtube.com/@keystoneupvc"
                 target="_blank"
                 rel="noopener noreferrer"
               >

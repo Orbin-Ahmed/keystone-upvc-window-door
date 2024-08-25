@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ lng, handleLanguageChange }) => {
               isMenuOpen ? "flex" : "hidden"
             } fixed right-0 top-24 z-50 flex-col justify-center rounded-md bg-white p-4 xl:static xl:z-auto xl:flex xl:w-auto xl:flex-row xl:items-center xl:gap-6 xl:bg-transparent xl:p-0`}
           >
-            <Link href="/gallery" className="mb-4 xl:mb-0">
+            <Link href="/products" className="mb-4 xl:mb-0">
               <button className="group relative text-xl font-semibold text-black hover:text-primary-color">
                 {t("Our Product")}
                 <span>

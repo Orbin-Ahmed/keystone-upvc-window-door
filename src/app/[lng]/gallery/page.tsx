@@ -5,13 +5,13 @@ import Header from "@/components/Header";
 import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
 
-export default function ContactUs({ params }: { params: { lng: string } }) {
+export default function GalleryPage({ params }: { params: { lng: string } }) {
   const [currentLanguage, setCurrentLanguage] = useState(params.lng);
   const router = useRouter();
 
   const handleLanguageChange = (newLang: string) => {
     setCurrentLanguage(newLang);
-    router.push(`/${newLang}/contact-us`);
+    router.push(`/${newLang}/gallery`);
   };
 
   return (
@@ -20,9 +20,7 @@ export default function ContactUs({ params }: { params: { lng: string } }) {
         lng={currentLanguage}
         handleLanguageChange={handleLanguageChange}
       />
-      <div className="container mx-auto w-5/6 md:w-4/6">
-        <Gallery lng={currentLanguage} />
-      </div>
+      <Gallery lng={currentLanguage} />
       <Footer lng={currentLanguage} />
     </>
   );

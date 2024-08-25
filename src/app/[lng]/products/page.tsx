@@ -23,7 +23,7 @@ export default function ProductPage({ params }: { params: { lng: string } }) {
         handleLanguageChange={handleLanguageChange}
       />
       <SlideShow images={images} lng={currentLanguage} />
-      <ProductPin />
+      <ProductPin lng={currentLanguage} />
       <Footer lng={currentLanguage} />
     </>
   );

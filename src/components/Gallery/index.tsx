@@ -52,7 +52,10 @@ const Gallery = ({ lng }: GalleryProps) => {
             layout="responsive"
             className="mt-8"
           />
-          <div className="mt-12 flex flex-col items-center justify-between gap-2 sm:flex-row">
+          <p className="mt-16 text-center text-3xl font-bold">
+            {t("Color Options")}
+          </p>
+          <div className="mt-4 flex flex-col items-center justify-between gap-2 sm:flex-row">
             <div className="flex basis-1/3 flex-col items-center justify-center">
               <Image
                 src="/images/Anthracite_grey.jpg"

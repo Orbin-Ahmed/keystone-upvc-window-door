@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client";
+import { UseTranslation } from "@/app/i18n";
+import React, { useEffect, useState } from "react";
 
 const images = [
   {
@@ -78,8 +80,22 @@ const images = [
   },
 ];
 
-const ProductPin = () => {
+type ProductPinProps = {
+  lng: string;
+};
+
+const ProductPin = ({ lng }: ProductPinProps) => {
   const [activeTab, setActiveTab] = useState("all");
+  const [t, setT] = useState(() => (key: string) => key);
+
+  useEffect(() => {
+    const fetchTranslations = async () => {
+      const { t: translation } = await UseTranslation(lng);
+      setT(() => translation);
+    };
+
+    fetchTranslations();
+  }, [lng]);
 
   const filterImages = () => {
     if (activeTab === "all") {
@@ -96,19 +112,19 @@ const ProductPin = () => {
           className={`px-4 py-2 font-semibold ${activeTab === "all" ? "border-b-2 border-primary-color" : "text-gray-500"}`}
           onClick={() => setActiveTab("all")}
         >
-          All
+          {t("All")}
         </button>
         <button
           className={`ml-4 px-4 py-2 font-semibold ${activeTab === "exterior" ? "border-b-2 border-primary-color" : "text-gray-500"}`}
           onClick={() => setActiveTab("exterior")}
         >
-          Exterior
+          {t("Exterior")}
         </button>
         <button
           className={`ml-4 px-4 py-2 font-semibold ${activeTab === "interior" ? "border-b-2 border-primary-color" : "text-gray-500"}`}
           onClick={() => setActiveTab("interior")}
         >
-          Interior
+          {t("Interior")}
         </button>
       </div>
 

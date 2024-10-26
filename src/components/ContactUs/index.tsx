@@ -128,7 +128,7 @@ const ContactUS = ({ lng }: ContactUSProps) => {
               className="mt-10 w-full rounded-2xl bg-primary-color py-4 text-center text-sm font-bold text-white shadow-xl sm:text-base"
               disabled={loading}
             >
-              {loading ? "Submitting..." : t("Submit Your Request")}
+              {loading ? "Submitting...." : t("Submit Your Request")}
             </button>
           </div>
 

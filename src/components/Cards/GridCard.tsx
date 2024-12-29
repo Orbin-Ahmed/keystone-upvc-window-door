@@ -14,7 +14,7 @@ const GridCard = ({ title, subTitle, boldText, image }: GridCardProps) => {
       <div className="mb-4 flex items-center justify-start text-xl font-extrabold">
         <Image
           src="/icons/green_circle.svg"
-          alt="CT Profile"
+          alt="CT Profiles"
           width={44}
           height={44}
           className="object-contain"

@@ -2,6 +2,7 @@
 import { UseTranslation } from "@/app/i18n";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import HomeVideo from "@/components/HomeVideo";
 
 type GalleryProps = {
   lng: string;
@@ -29,6 +30,7 @@ const Gallery = ({ lng }: GalleryProps) => {
           height={1080}
           layout="responsive"
         />
+        <HomeVideo src="/en/video/product.mp4" />
         <div className="container mx-auto w-5/6 md:w-4/6">
           <p className="mt-16 text-center text-3xl font-bold">
             {t("Product Specifications")}

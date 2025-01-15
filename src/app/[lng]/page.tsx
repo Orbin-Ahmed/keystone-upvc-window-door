@@ -11,6 +11,7 @@ import FourReasons from "@/sections/FourReasons";
 import BonusSection from "@/sections/BonusSection";
 import Faq from "@/sections/Faq";
 import Footer from "@/components/Footer";
+import HomeVideo from "@/components/HomeVideo";
 
 export default function Home({ params }: { params: { lng: string } }) {
   const [currentLanguage, setCurrentLanguage] = useState(params.lng);
@@ -28,6 +29,7 @@ export default function Home({ params }: { params: { lng: string } }) {
         handleLanguageChange={handleLanguageChange}
       />
       <Hero lng={currentLanguage} />
+      <HomeVideo src="/en/video/home.mp4" />
       <OurStory lng={currentLanguage} />
       <Benifits_1 lng={currentLanguage} />
       <Benifits_2 lng={currentLanguage} />
